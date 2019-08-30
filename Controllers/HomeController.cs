@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SalesWebMvc.Models;
+using System.Threading;
 
 namespace SalesWebMvc.Controllers
 {
@@ -12,13 +13,15 @@ namespace SalesWebMvc.Controllers
     {
         public IActionResult Index()
         {
+            
             return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
+            ViewData["Message"] = "Sales Web MVC App from C#";
+            ViewData["Email"] = "marcobugatudo@gmail.com";
+            
             return View();
         }
 
